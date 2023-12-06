@@ -5,6 +5,13 @@
 
 <!-- tag line -->
 <h1 align='center'>DNA Storage Resource Page</h1>
+<p align="center">
+  <img alt="Static Badge" src="https://img.shields.io/badge/npm-v20.5.1-blue">
+  <img alt="Static Badge" src="https://img.shields.io/badge/nextjs-v13.5.2-green">
+  <img alt="NPM" src="https://img.shields.io/npm/l/next">
+
+</p>
+
 <p>Welcome to the DNA Resource Page repository! This project is an information gathering website dedicated to providing resources related to research and development in the DNA storage and security field. Users can explore a variety of information, including research papers, articles, books, blogs, companies, courses, patents, research grants, tools, and more.</p>
 
 <h2>Tech Stack</h2>
