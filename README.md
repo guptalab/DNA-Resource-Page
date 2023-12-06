@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<!-- logo -->
+<p align="center">
+  <img width='250' src="public/android-chrome-512x512.png">
+</p>
 
-## Getting Started
+<!-- tag line -->
+<h1 align='center'>DNA Storage Resource Page</h1>
+<p>Welcome to the DNA Resource Page repository! This project is an information gathering website dedicated to providing resources related to research and development in the DNA storage and security field. Users can explore a variety of information, including research papers, articles, books, blogs, companies, courses, patents, research grants, tools, and more.</p>
 
-First, run the development server:
+<h2>Tech Stack</h2>
+We have built this project using Next.js 13 as our full-stack framework, leveraging the power of MUI components for a seamless user interface.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<h2>Features</h2>
+<ul>
+    <li>Table view of information in different categories</li>
+    <li>Filtering data using keywords and dates</li>
+    <li>User login with Google</li>
+    <li>Requesting CRUD access to manage information</li>
+    <li>Accepted users can create, update, and delete rows in tables</li>
+</ul>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<h2>Installation</h2>
+To set up the project on your local machine, follow these steps:
+<ul>
+    <li>Install Node.js version 20 or above.</li>
+    <li>Clone the repository:
+    <code>git clone https://github.com/guptalab/DNA-Resource-Page.git</code></li>
+    <li>Install dependencies: <code>npm i</code></li>
+    <li>Obtain the <code>.env</code> file by reaching out to us at <a target="_blank" href="mailto:dnaresource@guptalab.org">dnaresource@guptalab.org</a></li>
+    <li>Create an <code>.env.local</code> file in the cloned project (same directory as README.md) and paste the provided environment variables.
+    <li>Run the project: <code>npm run dev</code></li>
+    <li>This will start the development server on your machine at port 3000 by default.
+    </li>
+    <li>Open your favorite browser and go to <a href="http://localhost:3000" target="_blank">http://localhost:3000</a> to view the locally running website.</li>
+</ul>
+Feel free to explore the code, make changes, and contribute to the project. If you identify areas for improvement, such as code restructuring, refactoring, or logic errors, open a pull request, and our team will review it promptly.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+<h2>Project Structure</h2>
+The project follows a structured organization to facilitate easy navigation and understanding of the codebase. Here's a brief overview of the main directories:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **`/public`**: Contains static assets such as images or files used in the project.
+- **`/src`**: This is the heart of the application, where the source code resides. Key directories include:
+  - **`/components`**: Reusable React components used throughout the application.
+  - **`/pages`**: Next.js pages that define the different routes of the application.
+  - **`/styles`**: Stylesheets for styling the components and pages.
+  - **`/utils`**: Utility functions or helper modules used across the application.
 
-## Learn More
+> Additionally, we encourage contributors to write tests for new features or existing functionality.
 
-To learn more about Next.js, take a look at the following resources:
+<h2>Issues/Bugs</h2>
+If you encounter any bugs or issues while using our application, please report them in the Issues tab of this repository. Our team will work to address and resolve them promptly.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<h2>Contribution</h2>
+We welcome contributions from the community! If you have ideas for new features or improvements, implement them and create a pull request. We appreciate contributions related to UI enhancements. Your efforts will be acknowledged in our contributors' field. Thank you for helping make this project better! 😄
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<h2>Deployment</h2>
+The application is deployed using <a href="https://vercel.com" target="_blank">vercel.com</a> which uses a continuous integration and continuous deployment (CI/CD) pipeline to automate the deployment process.
 
-## Deploy on Vercel
+<h2>Contact</h2>
+If you have any questions, suggestions, or just want to say hello, feel free to reach out to us at <a target="_blank" href="mailto:dnaresource@guptalab.org">dnaresource@guptalab.org</a>. We value community feedback and are eager to hear from you!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<br/>
+<p align="center">
+<i>✨🧬 Happy coding! 🧬✨</i>
