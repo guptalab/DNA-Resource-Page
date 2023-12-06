@@ -1,0 +1,53 @@
+.filter-heading {
+    font-size: 1.2em;
+    font-weight: 800;
+}
+
+.filter-main {
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.filter-main::-webkit-scrollbar {
+    display: none;
+}
+
+.filter-source,
+.filter-author,
+.filter-published-date,
+.filter-topic,
+.filter-type {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: .5em;
+}
+
+.filter-source-dropdown-content,
+.filter-author-dropdown-content {
+    display: flex;
+    flex-direction: column;
+
+    max-height: 15em;
+    overflow-y: scroll;
+}
+
+.filter-source-dropdown-item,
+.filter-author-dropdown-item {
+    display: flex;
+    margin-top: 0.4em;
+}
+
+.filter-source-dropdown-item-text,
+.filter-author-dropdown-item-text {
+    font-size: 0.8em;
+    padding-left: .5em;
+}
+
+.filter-source-dropdown-content::-webkit-scrollbar,
+.filter-author-dropdown-content::-webkit-scrollbar {
+    display: none;
+}

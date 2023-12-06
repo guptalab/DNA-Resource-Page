@@ -1,0 +1,45 @@
+.pagination-container {
+    display: flex;
+    list-style-type: none;
+    margin-bottom: 1em;
+}
+
+.pagination-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 2em;
+    height: 2em;
+    margin-left: .4em;
+
+    padding: .5em;
+    text-align: center;
+    background-color: #00000025;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    font-family: 'Inter';
+}
+
+.dots {
+    transform: translateY(-25%);
+}
+
+.pagination-item:hover {
+    background-color: #00000034;
+}
+
+.active,
+.active:hover {
+    border: 1px solid black;
+}

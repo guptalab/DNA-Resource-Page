@@ -1,0 +1,89 @@
+.header {
+    width: 100%;
+    height: 4em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.date-wrapper {
+    padding-top: .1em;
+    display: flex;
+    align-items: center;
+}
+
+.profile-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.bell-logo {
+    font-size: 1.5em;
+}
+
+.bell-wrapper {
+    padding: .5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.bell-wrapper:hover {
+    background-color: #eeeeeede;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.user-wrapper {
+    margin-left: .5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    padding: .2em .5em;
+    border-radius: .75em;
+}
+
+.user-wrapper:hover {
+    background-color: #eeeeeede;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: .5em;
+    margin-right: 3em;
+}
+
+.image {
+    width: 2.5em;
+    height: 2.5em;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.user-name {
+    font-size: .9em;
+    font-weight: 600;
+}
+
+.user-status {
+    font-size: 0.75em;
+}
+
+.more-wrapper {
+    padding: .2em;
+    background-color: #d4d4d454;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.more-icon {
+    font-size: .7em;
+    width: fit-content;
+}
