@@ -1,21 +1,18 @@
-import Patents from "@backend/models/patentModel"
+import Researcher from "@backend/models/researchersModel"
 import connectDB from "../index"
-// import Paper from "../models/articlePaperModel"
 
-import { data } from "@data/patents"
+import { data } from "@data/researchers"
 
 export const addData = async () => {
     try {
         await connectDB()
         const insertData = data.map((item) => {
             return {
-                title: item["Title"],
-                type: "Patent",
-                authors: item["Organization / Authors"].trim().split(","),
+                name: item["Name"],
                 link: item["Link"]
             }
         })
-        await Patents.insertMany(insertData)
+        await Researcher.insertMany(insertData)
     } catch (error) {
         throw error
     }
