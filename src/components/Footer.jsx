@@ -67,7 +67,7 @@ const Disclaimer = (
     <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       <Typography>
                 <b>Note</b>:{" "}
-                If you want your research paper to be listed on this website, please kindly send us an email with the .bib file of your paper.
+                If you want your research paper to be listed on this website, please kindly send us an email with the .bib file of your paper. If you are a researcher in dna storage and want to include your name in the list of researchers, please kindly send us an email with your name and profile link.
               </Typography>
     </Box>
     <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
