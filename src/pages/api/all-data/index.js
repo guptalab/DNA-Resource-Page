@@ -8,6 +8,7 @@ import Event from "@backend/models/eventModel";
 import Grant from "@backend/models/grantModel";
 import Patents from "@backend/models/patentModel";
 import Project from "@backend/models/projectModel";
+import Researcher from "@backend/models/researchersModel";
 import SimulationTool from "@backend/models/simulationToolModel";
 import Software from "@backend/models/softwareModel";
 import YoutubeContent from "@backend/models/youtubeContentModel";
@@ -28,7 +29,8 @@ export default async function handler(req, res) {
                 Project.find({}),
                 SimulationTool.find({}),
                 Software.find({}),
-                YoutubeContent.find({})
+                YoutubeContent.find({}),
+                Researcher.find({})
             ];
 
             const [
@@ -43,7 +45,8 @@ export default async function handler(req, res) {
                 projects,
                 simulationTools,
                 softwares,
-                youtubeContents
+                youtubeContents,
+                researchers
             ] = await Promise.all(promises);
 
             const data = {
@@ -58,7 +61,8 @@ export default async function handler(req, res) {
                 projects,
                 simulationTools,
                 softwares,
-                youtubeContents
+                youtubeContents,
+                researchers
             };
 
             res.status(200).json(data);
