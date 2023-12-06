@@ -99,6 +99,8 @@ const Footer = () => {
           alignItems: "center",
           justifyContent: "space-between",
           padding: "1rem",
+          borderRadius: "1rem",
+          marginTop: "1rem",
         }}
       >
         <Box
