@@ -65,6 +65,12 @@ const Disclaimer = (
     sx={{ textAlign: 'center', marginTop: '1rem', width: '90%' }}
   >
     <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <Typography>
+                <b>Note</b>:{" "}
+                If you want your research paper to be listed on this website, please kindly send us an email with the .bib file of your paper. If you are a researcher in dna storage and want to include your name in the list of researchers, please kindly send us an email with your name and profile link.
+              </Typography>
+    </Box>
+    <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       <Typography sx={{ 'textAlign': 'center' }}>
         <b>Disclaimer</b>: The information provided on the webpage is for educational and research purposes. The webpage contains links to third-party website and we are not responsible for the privacy practices or content of these websites or the data that they provide. Please use it at your own risk. Last updated on {getCurrentDate()}. For any further information or suggestion you may reach to us at <Link href={'mailto:dnaresource@guptalab.org'} target='_blank' style={{ color: 'blue' }}>dnaresource@guptalab.org</Link>. We are thankful to DNA Storage Alliance (<Link href={'https://dnastoragealliance.org/'} style={{ color: 'blue' }} target="_blank">link</Link>).
       </Typography>
@@ -153,6 +159,10 @@ const Footer = () => {
               </Typography>
               <Typography>
                 <b>Contact</b>:{" "}
+                Prof. Manish Gupta
+              </Typography>
+              <Typography>
+                <b>Email</b>:{" "}
                 <Link target="blank" href={`mailto:dnaresource@guptalab.org`}>
                   dnaresource@guptalab.org
                 </Link>
