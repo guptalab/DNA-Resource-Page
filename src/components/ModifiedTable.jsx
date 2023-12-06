@@ -24,7 +24,8 @@ const api = {
     'Simulation Tool': '/api/simulation-tools',
     'Software/Tool': '/api/softwares',
     'Video': '/api/youtube',
-    'Book': '/api/books'
+    'Book': '/api/books',
+    'Researchers': '/api/researchers',
 };
 
 const resourceTypes = {

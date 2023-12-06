@@ -162,59 +162,59 @@ function GetStatsCards(gridData, cardSpacing) {
 }
 
 function GetGridData(papers, blogs, companies, grants, patents, tools, courses, events, videos, projects, softwares, books) {
-  return [
+  let x = [
     {
       href: '/research-papers',
-      title: 'Total Research Papers',
+      title: 'Research Papers',
       value: papers.length,
       color: '#7FCD93',
       icon: <MdArticle />
     },
     {
       href: '/blogs',
-      title: 'Total Blogs',
+      title: 'Blogs',
       value: blogs.length,
       color: '#F9A109',
       icon: <ImBlogger />
     },
     {
       href: '/companies',
-      title: 'Total Companies',
+      title: 'Companies',
       value: companies.length,
       color: '#686de0',
       icon: <BsBuildingsFill />
     },
     {
       href: '/research-grants',
-      title: 'Total Research Grants',
+      title: 'Research Grants',
       value: grants.length,
       color: '#6ab04c',
       icon: <GiReceiveMoney />
     },
     {
       href: '/patents',
-      title: 'Total Patents',
+      title: 'Patents',
       value: patents.length,
       color: '#01a3a4',
       icon: <FaStamp />
     },
     {
       href: '/simulation-tools',
-      title: 'Total Simulation Tools',
+      title: 'Simulation Tools',
       value: tools.length,
       color: '#ee5253',
       icon: <BsFillGearFill />
     },
     {
       href: '/courses-and-tutorials',
-      title: 'Total Courses',
+      title: 'Courses',
       value: courses.length,
       color: '#f368e0',
       icon: <AiFillPlayCircle />
     },
     {
       href: '/conferences-and-webinar-events',
-      title: 'Total Events',
+      title: 'Events',
       value: events.length,
       color: '#8395a7',
       icon: <BsFillCalendarEventFill />
@@ -228,26 +228,29 @@ function GetGridData(papers, blogs, companies, grants, patents, tools, courses, 
     },
     {
       href: '/projects',
-      title: 'Total Projects',
+      title: 'Projects',
       value: projects.length,
       color: '#40739e',
       icon: <GoGoal />
     },
     {
       href: '/software-and-tools',
-      title: 'Total Software & Tools',
+      title: 'Software & Tools',
       value: softwares.length,
       color: '#EE5A24',
       icon: <AiOutlineCloudDownload />
     },
     {
       href: '/books',
-      title: 'Total Books',
+      title: 'Books',
       value: books.length,
       color: '#1289A7',
       icon: <FaBookOpen />
     },
-  ];
+  ]
+  .sort((a, b) => a.title.localeCompare(b.title))
+
+  return x;
 }
 
 function ResearchPaperOrgsChart(papers) {
