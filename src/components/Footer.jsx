@@ -46,9 +46,9 @@ const developers = [
 
 function getCurrentDate() {
   const months = [
-    "January", "February", "March", "April",
-    "May", "June", "July", "August",
-    "September", "October", "November", "December"
+      "January", "February", "March", "April",
+      "May", "June", "July", "August",
+      "September", "October", "November", "December"
   ];
 
   const currentDate = new Date();
@@ -62,14 +62,27 @@ function getCurrentDate() {
 
 const Disclaimer = (
   <Box
-    sx={{ textAlign: 'center', marginTop: '1rem', width: '90%' }}
+    sx={{textAlign: 'center'}}
   >
-    <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <Typography sx={{ 'textAlign': 'center' }}>
-        <b>Disclaimer</b>: The information provided on the webpage is for educational and research purposes. The webpage contains links to third-party website and we are not responsible for the privacy practices or content of these websites or the data that they provide. Please use it at your own risk. Last updated on {getCurrentDate()}. For any further information or suggestion you may reach to us at <Link href={'mailto:dnaresource@guptalab.org'} target='_blank' style={{ color: 'blue' }}>dnaresource@guptalab.org</Link>. We are thankful to DNA Storage Alliance (<Link href={'https://dnastoragealliance.org/'} style={{ color: 'blue' }} target="_blank">link</Link>).
+    <Box sx={{
+      textAlign: "center",
+      verticalAlign: "middle",
+      display: "flex",
+      alignItems: "center",
+    }}>
+      <FaRegCopyright style={{ marginRight: ".5rem" }} />
+      <Typography>
+        This website is a part of the{" "}
+        <Link href="https://guptalab.org">Gupta Lab</Link> and is not intended
+        for professional use.
       </Typography>
     </Box>
-  </Box >
+    <Box>
+      <Typography sx={{'textAlign':'left'}}>
+      Disclaimer: The information provided on the webpage is for educational and research purposes. The webpage contains links to third-party website and we are not responsible for the privacy practices or content of these websites or the data that they provide. Please use it at your own risk. Last updated on {getCurrentDate()}. For any further information or suggestion you may reach to us at dnaresource@guptalab.org. We are thankful to DNA Storage Alliance (link).
+      </Typography>
+    </Box>
+  </Box>
 );
 
 const Footer = () => {
@@ -190,7 +203,7 @@ const Footer = () => {
                         Math.ceil(
                           developers.length / numberOfDevelopersColumns
                         ) *
-                        (index + 1)
+                          (index + 1)
                       )
                       .map((developer, index) => (
                         <ListItem key={index}>

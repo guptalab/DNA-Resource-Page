@@ -5,7 +5,7 @@ import { Box, Card, CardContent, CardHeader, CircularProgress, Grid, Typography,
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { AiFillPlayCircle, AiOutlineCloudDownload } from "react-icons/ai";
-import { BsBuildingsFill, BsFillCalendarEventFill, BsFillFileEarmarkPersonFill, BsFillGearFill, BsYoutube } from "react-icons/bs";
+import { BsBuildingsFill, BsFillCalendarEventFill, BsFillGearFill, BsYoutube } from "react-icons/bs";
 import { FaBookOpen, FaStamp } from "react-icons/fa";
 import { GiReceiveMoney } from "react-icons/gi";
 import { GoGoal } from "react-icons/go";
@@ -33,8 +33,7 @@ const Home = () => {
     simulationTools: [],
     youtubeContents: [],
     softwares: [],
-    books: [],
-    researchers: [],
+    books: []
   });
 
   async function fetchData() {
@@ -55,7 +54,7 @@ const Home = () => {
     fetchData();
   }, []);
 
-  const gridData = GetGridData(data.articlePapers, data.blogs, data.companies, data.grants, data.patents, data.simulationTools, data.courses, data.events, data.youtubeContents, data.projects, data.softwares, data.books, data.researchers);
+  const gridData = GetGridData(data.articlePapers, data.blogs, data.companies, data.grants, data.patents, data.simulationTools, data.courses, data.events, data.youtubeContents, data.projects, data.softwares, data.books);
 
   const grid = GetStatsCards(gridData, cardSpacing);
 
@@ -162,7 +161,7 @@ function GetStatsCards(gridData, cardSpacing) {
   </Box>;
 }
 
-function GetGridData(papers, blogs, companies, grants, patents, tools, courses, events, videos, projects, softwares, books, researchers) {
+function GetGridData(papers, blogs, companies, grants, patents, tools, courses, events, videos, projects, softwares, books) {
   let x = [
     {
       href: '/research-papers',
@@ -248,15 +247,8 @@ function GetGridData(papers, blogs, companies, grants, patents, tools, courses, 
       color: '#1289A7',
       icon: <FaBookOpen />
     },
-    {
-      href: '/researchers',
-      title: 'Researchers',
-      value: researchers.length,
-      color: '#6c5ce7',
-      icon: <BsFillFileEarmarkPersonFill />
-    }
   ]
-    .sort((a, b) => a.title.localeCompare(b.title))
+  .sort((a, b) => a.title.localeCompare(b.title))
 
   return x;
 }
