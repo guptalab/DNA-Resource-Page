@@ -17,30 +17,37 @@ const developers = [
   {
     name: "Neel Poriya",
     profile: "NeelPoriya",
+    role: "Frontend"
   },
   {
     name: "Vrutik Prajapati",
     profile: "vrutik2809",
+    role: "Backend"
   },
   {
     name: "Kishan Sangani",
     profile: "kishan1265",
+    role: "Frontend"
   },
   {
     name: "Harsh Patel",
     profile: "Harshpatel2910",
+    role: "Backend"
   },
   {
     name: "Darshan Kheni",
     profile: "darshankheni",
+    role: "Data"
   },
   {
     name: "Achyut Shah",
     profile: "Achyut-1412",
+    role: "Data"
   },
   {
     name: "Param Mistry",
     profile: "parammistry",
+    role: "Data"
   },
 ];
 
@@ -219,6 +226,14 @@ const Footer = () => {
                               variant="body1"
                             >
                               {developer.name}
+                            </Typography>
+                            <Typography
+                              sx={{
+                                "color": "#aaa",
+                              }}
+                              variant="body2"
+                            >
+                             {developer.role}
                             </Typography>
                           </Link>
                         </ListItem>
