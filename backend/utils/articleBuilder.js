@@ -2,8 +2,8 @@ export class ArticleBuilder{
     #title = "";
     #authors = [];
     #type = "Articles And Papers";
-    #topics = ["DNA"];
-    #publishedDate = "";
+    #topics = ["DNA Storage"];
+    #publishedDate = Date.now();
     #source = "";
     #link = "";
     #cleanString(str){
@@ -26,7 +26,8 @@ export class ArticleBuilder{
         return this;
     }
     addPublishedDate(month, year){
-        this.#publishedDate = `${month ? month + "-" : ""}${year || ""}`;
+        const date = new Date(`${month ? month + "-" : ""}${year || ""}`);
+        this.#publishedDate = !isNaN(date.getTime()) ? date : this.#publishedDate;
         return this;
     }
     addSource(publisher, organization){
