@@ -35,3 +35,6 @@ yarn-error.log*
 next-env.d.ts
 
 dump/
+
+#no one should know🤫
+gpt-prompt.txt
