@@ -7,7 +7,9 @@ export const parseBibFromFileBuffer = async (buffer) => {
         const dois = parseDOIFromBibBuffer(buffer)
         const result = []
         for(const doi of dois){
+            if(!doi) continue
             const data = await fetchBibInfo(doi)
+            if(!data) continue
             result.push(serializeBibData(data))
         }
         return result
@@ -18,7 +20,7 @@ export const parseBibFromFileBuffer = async (buffer) => {
 
 const parseDOIFromBibBuffer = (buffer) => {
     try {
-        const input = Buffer.from(buffer).toString('utf8')
+        const input = Buffer.from(buffer).toString('utf8').replace(/\\/g, '').replace(/\$/g, '')
         const output = new Cite(input);
         const data = output.get({
             format: 'string',
@@ -34,8 +36,12 @@ const parseDOIFromBibBuffer = (buffer) => {
 
 const fetchBibInfo = async (doi) => {
     try {
-        const url = `https://doi.org/${doi}`
-        const citation = await Cite.async(url);
+        const pattern = /^(http[s]?:\/\/(.+\.)?)?doi\.org\/.*$/
+        let url = doi
+        if(!pattern.test(doi)){
+            url = `https://doi.org/${doi}`
+        }
+        const citation = await Cite.async(doi);
         const citationData = citation.get({
             format: 'string',
             type: 'json',
@@ -45,6 +51,9 @@ const fetchBibInfo = async (doi) => {
         data[0].properties.url = url
         return data[0]
     } catch (error) {
+        if(error.message === "No parser found for @else/url"){
+            return null
+        }
         throw error
     }
 }
